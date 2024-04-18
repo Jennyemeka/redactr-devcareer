@@ -56,6 +56,11 @@ button:hover {
     margin-top: 20px;
   }
 
+  footer{
+    color: aliceblue;
+    margin: 30px;
+  }
+
   @media only screen and (max-width: 600px) {
     #scramblerForm {
       padding: 10px;
