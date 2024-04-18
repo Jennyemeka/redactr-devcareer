@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Ojuju:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Text Scrambler</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="headtitle">REDACTR</h1>
+      <p> Hi👋 scramble some words from a body of text content</p>
+    <form id="scramblerForm">
+      <label for="originalText">Original Text:</label><br/>
+      <textarea id="originalText" rows="4" cols="50" placeholder="leave a comment below......"></textarea><br />
+      <label for="wordsToScramble">Words to Scramble:</label><br/>
+      <input type="text" id="wordsToScramble"  placeholder="Enter a word to be scrambled"/><br/>
+
+    <label for="replacementChar">Replacement Character:</label><br />
+<select class="form_input" id="replacement" onchange="handleCustomReplacement()">
+  <option value="****">Asterisks</option>
+  <option value="????">Question Marks</option>
+  <option value="----">Dashes</option>
+  <option value="____">Underscores</option>
+  <option value="REDACTED">Custom Word (e.g., "REDACTED")</option>
+</select>
+<div id="customReplacementInputWrapper" style="display: none;">
+    <input type="text" id="customReplacementInput" placeholder="Enter custom word">
+  </div>
+  <button type="button" onclick="scrambleText()">Redact Now</button>
+      <button type="button" onclick="resetForm()">Reset Form</button>
+    </form>
+    <div id="output"></div>
+</div>
+    <script src="index.js"></script>
+  </body>
+</html>
